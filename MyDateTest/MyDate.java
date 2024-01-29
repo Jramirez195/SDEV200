@@ -6,6 +6,8 @@
 // IMPORTANT:
 // Similar to the M01 Programming Assignment 4, do not run this code, make sure to run TestMyDate.java as that's the test file for this project!
 
+package MyDateTest;
+
 import java.util.GregorianCalendar;
 
 public class MyDate {

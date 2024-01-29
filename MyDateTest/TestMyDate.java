@@ -6,6 +6,7 @@
 // IMPORTANT:
 // Run this code for the project to work!!
 
+package MyDateTest;
 public class TestMyDate {
     public static void main(String[] args) {
         MyDate date1 = new MyDate();
