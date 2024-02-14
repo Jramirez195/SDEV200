@@ -19,3 +19,11 @@ This README file will link to each module's Markdown file to explain every singl
 ### Module Three
 * [Programming Assignment 1](https://github.com/Jramirez195/SDEV200/tree/main/GeometricShapes)
 * [Programming Assignment 2](https://github.com/Jramirez195/SDEV200/tree/main/RationalBigInteger)
+### Module Four
+* [Programming Assignment 1](https://github.com/Jramirez195/SDEV200/tree/main/SymbolMatcher)
+* [Programming Assignment 2](https://github.com/Jramirez195/SDEV200/tree/main/CountKeywords)
+* [Programming Assignment 3](https://github.com/Jramirez195/SDEV200/tree/main/MyLinkedList)
+### Module Five
+* [Programming Assignment 1]()
+* [Programming Assignment 2]()
+* [Programming Assignment 3]()
