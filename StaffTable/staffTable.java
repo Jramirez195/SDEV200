@@ -1,3 +1,9 @@
+/* Program Name: staffTable.java
+   Author: Jose Ramirez
+   Date Last Updated: 2/27/2024
+   Summary: This JavaFX application facilitates the management of staff information by providing functionality.
+ */
+
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -24,7 +30,15 @@ public class staffTable extends Application {
     private static final String PASSWORD = "your_password_here";
 
     // JavaFX components
-    private TextField idField, lastNameField, firstNameField, miField, addressField, cityField, stateField, telephoneField, emailField;
+    private TextField idField;
+    private TextField lastNameField;
+    private TextField firstNameField;
+    private TextField miField;
+    private TextField addressField;
+    private TextField cityField;
+    private TextField stateField;
+    private TextField telephoneField;
+    private TextField emailField;
     private Button viewButton, insertButton, updateButton;
     private TableView<StaffRecord> tableView;
     private ObservableList<StaffRecord> staffData;
@@ -55,7 +69,7 @@ public class staffTable extends Application {
         tableView = new TableView<>();
         staffData = FXCollections.observableArrayList();
 
-        // Set up the table columns
+        // The set-up for the table columns.
         TableColumn<StaffRecord, String> idColumn = new TableColumn<>("ID");
         idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty());
 
@@ -74,12 +88,21 @@ public class staffTable extends Application {
         TableColumn<StaffRecord, String> cityColumn = new TableColumn<>("City");
         cityColumn.setCellValueFactory(cellData -> cellData.getValue().cityProperty());
 
+        TableColumn<StaffRecord, String> stateColumn = new TableColumn<>("State");
+        stateColumn.setCellValueFactory(cellData -> cellData.getValue().stateProperty());
 
-        // Add more columns for other fields in a similar way
+        TableColumn<StaffRecord, String> telephoneColumn = new TableColumn<>("Telephone");
+        telephoneColumn.setCellValueFactory(cellData -> cellData.getValue().telephoneProperty());
 
-        tableView.getColumns().addAll(idColumn, lastNameColumn, firstNameColumn, miColumn);
+        TableColumn<StaffRecord, String> emailColumn = new TableColumn<>("Email");
+        emailColumn.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
 
-        // Set up button actions
+
+        // More columns for other fields in a similar way
+
+        tableView.getColumns().addAll(idColumn, lastNameColumn, firstNameColumn, miColumn, addressColumn, cityColumn, stateColumn, telephoneColumn, emailColumn);
+
+        // Button actions
         viewButton.setOnAction(e -> viewRecord());
         insertButton.setOnAction(e -> insertRecord());
         updateButton.setOnAction(e -> updateRecord());
@@ -114,7 +137,10 @@ public class staffTable extends Application {
         inputGrid.add(new Label("Telephone:"), 0, 5);
         inputGrid.add(telephoneField, 1, 5);
 
-        // Add more fields to the grid
+        inputGrid.add(new Label("Email:"), 2, 5);
+        inputGrid.add(emailField, 3, 5);
+
+        // More fields to the grid
 
         inputGrid.add(viewButton, 0, 10);
         inputGrid.add(insertButton, 1, 10);
@@ -129,19 +155,16 @@ public class staffTable extends Application {
         primaryStage.show();
     }
 
+    // Will work on this in the future, It's really fun and will like to work on a working table!!
     private void viewRecord() {
-        // Implement logic to retrieve and display the record with the specified ID
     }
 
     private void insertRecord() {
-        // Implement logic to insert a new record with the provided information
     }
 
     private void updateRecord() {
-        // Implement logic to update the record with the specified ID and the provided information
     }
-
-    // Create a class to represent a Staff record
+    // A class to represent a Staff record
     public static class StaffRecord {
         private final StringProperty id;
         private final StringProperty lastName;
@@ -150,29 +173,38 @@ public class staffTable extends Application {
 
         private final StringProperty mi;
 
-        // Add more properties for other fields in a similar way
+        private final StringProperty address;
 
-        public StaffRecord(String id, String lastName, String firstName, String mi) {
+        private final StringProperty city;
+
+        private final StringProperty state;
+
+        private final StringProperty telephone;
+
+        private final StringProperty email;
+
+        // More properties for other fields in a similar way
+
+        public StaffRecord(String id, String lastName, String firstName, String mi, String address, String city, String state, String telephone, String email) {
             this.id = new SimpleStringProperty(id);
             this.lastName = new SimpleStringProperty(lastName);
             this.firstName = new SimpleStringProperty(firstName);
             this.mi = new SimpleStringProperty(mi);
+            this.address = new SimpleStringProperty(address);
+            this.city = new SimpleStringProperty(city);
+            this.state = new SimpleStringProperty(state);
+            this.telephone = new SimpleStringProperty(telephone);
+            this.email = new SimpleStringProperty(email);
         }
 
-        public StringProperty idProperty() {
-            return id;
-        }
-
-        public StringProperty lastNameProperty() {
-            return lastName;
-        }
-
-        public StringProperty firstNameProperty() {
-            return firstName;
-        }
-
-        public StringProperty miProperty() {
-            return mi;
-        }
+        public StringProperty idProperty() {return id;}
+        public StringProperty lastNameProperty() {return lastName;}
+        public StringProperty firstNameProperty() {return firstName;}
+        public StringProperty miProperty() {return mi;}
+        public StringProperty addressProperty() {return address;}
+        public StringProperty cityProperty() {return city;}
+        public StringProperty stateProperty() {return state;}
+        public StringProperty telephoneProperty() {return telephone;}
+        public StringProperty emailProperty() {return email;}
     }
 }
