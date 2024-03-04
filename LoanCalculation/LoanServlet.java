@@ -1,3 +1,8 @@
+// Program Name: LoanServlet.java
+// Author: Jose Ramirez
+// Date Last Updated: 3/3/2024
+// Summary: The JSP engine for the Program
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
