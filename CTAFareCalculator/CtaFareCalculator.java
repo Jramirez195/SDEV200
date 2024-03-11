@@ -421,6 +421,7 @@ public class CtaFareCalculator extends Application {
                 stations.add("28: Ashland/63rd");
                 stations.add("29: King Drive");
                 stations.add("30: Cottage Grove");
+                break;
             case "Purple":
                 stations.add("1: Linden");
                 stations.add("2: Central");
@@ -448,10 +449,12 @@ public class CtaFareCalculator extends Application {
                 stations.add("24: Washington/Wabash");
                 stations.add("25: State/Lake");
                 stations.add("26: Clark/Lake");
+                break;
             case "Yellow":
                 stations.add("1: Dempster-Skokie");
                 stations.add("2: Oakton-Skokie");
                 stations.add("3: Howard");
+                break;
             case "Brown":
                 stations.add("1: Kimball");
                 stations.add("2: Kedzie");
@@ -479,6 +482,7 @@ public class CtaFareCalculator extends Application {
                 stations.add("24: Washington/Wabash(Brown)");
                 stations.add("25: State/Lake(Brown)");
                 stations.add("26: Clark/Lake(Brown)");
+                break;
             case "Pink":
                 stations.add("1: 54th/Cermak");
                 stations.add("2: Cicero");
@@ -502,6 +506,7 @@ public class CtaFareCalculator extends Application {
                 stations.add("20: LaSalle/VanBuren(Pink)");
                 stations.add("21: Quincy(Pink)");
                 stations.add("22: Washington/Wells(Pink)");
+                break;
             case "Orange":
                 stations.add("1: Midway");
                 stations.add("2: Pulaski");
